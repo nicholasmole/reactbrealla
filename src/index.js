@@ -1,7 +1,15 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
+let clock = function(){
+    return <h2>Time now: {new Date().toLocaleTimeString()} This is clock</h2>
+}
+
+setInterval( function(){
+   
+
 ReactDom.render(
-    <h1>Welcome to Breall Town</h1>,
+    clock(),
     document.getElementById('root')
 );
+},1000);
